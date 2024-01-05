@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: #000000;
+}
+
+* {
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin   : auto;
+}
+
+.row {
+    display  : flex;
+    flex-wrap: wrap;
+}
+
+.v-center {
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    margin    : 0;
+    padding   : 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*     Header     */
+.header {
+    display : block;
+    width   : 100%;
+    position: relative;
+    z-index : 99;
+    padding : 5px;
+    background-color: #ffffff;
+}
+
+.header .logo {
+    /*background-color: aqua;*/
+    display        : flex;
+    font-weight    : 500;
+    align-items    : center;
+    text-align     : center;
+    text-decoration: none;
+    color          : #fff;
+    cursor         : default;
+    padding        : 0 15px;
+}
+
+.header .logo a {
+    font-size      : 25px;
+    color          : #000000;
+    font-weight    : 600;
+    text-decoration: none;
+    cursor: default;
+}
+
+.header .logo img {
+    width         : 70px;
+    text-transform: capitalize;
+    color         : black;
+}
+
+.header .item-left {
+    flex: 0 0 25%;
+}
+
+.header .item-center {
+    flex: 0 0 50%;
+    text-align: center;
+}
+
+.header .item-right {
+    flex           : 0 0 25%;
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.header .item-right a {
+    text-decoration: none;
+    font-size      : 16px;
+    color          : #000000;
+    display        : inline-block;
+    margin-left    : 10px;
+    transition     : color 0.3s ease;
+}
+
+.header .menu>ul>li {
+    display    : inline-block;
+    line-height: 50px;
+    margin-left: 25px;
+}
+
+.header .menu>ul>li>a {
+    font-size     : 14px;
+    font-weight   : 500;
+    color         : #000000;
+    position      : relative;
+    text-transform: capitalize;
+    transition    : color 0.3s ease;
+}
+
+.header .menu>ul>li .sub-menu {
+    position        : absolute;
+    z-index         : 500;
+    background-color: #ffffff;
+    box-shadow      : -2px 2px 70px -25px rgba(0, 0, 0, 0.3);
+    padding         : 20px 30px;
+    transition      : all 0.5s ease;
+    margin-top      : 25px;
+    opacity         : 0;
+    visibility      : hidden;
+}
+
+.header .item-right img {
+    width: 120px;
+    height: 50px;
+}
+
+@media(min-width: 992px) {
+    .header .menu>ul>li.menu-item-has-children:hover .sub-menu {
+        margin-top: 0;
+        visibility: visible;
+        opacity   : 1;
+    }
+}
+
+.header .menu>ul>li .sub-menu.mega-menu>.list-item>ul>li>a:hover,
+.header .menu>ul>li .sub-menu>ul>li>a:hover,
+.header .item-right a:hover,
+.header .menu>ul>li:hover>a {
+    color: #ff1500;
+}
+
+/*     Banner Section     */
+.banner-section {
+    background-color: #000000;
+    background-size    : cover;
+    background-position: center;
+    height             : 700px;
+    width              : 100%;
+    display            : block;
+}
+
+
+
+/*     CARD     */
+
+.colecao-figures .container-compras>h1 {
+    font-size    : 50px;
+    color        : rgb(0, 0, 0);
+    text-align   : center;
+    margin-top   : 10px;
+    margin-bottom: 20px;
+    color        : #ff1500;
+}
+
+
+.colecao-figures .container-compras>h2 {
+    border-top   : 5px solid rgb(187, 255, 0);
+    border-bottom: 5px solid rgb(187, 255, 0);
+    font-size    : 40px;
+    color        : #fff;
+    text-align   : center;
+}
+.colecao-figures .container-compras>h3 {
+    margin-top: 40px;
+    border-top   : 5px solid rgb(187, 255, 0);
+    border-bottom: 5px solid rgb(187, 255, 0);
+    font-size    : 40px;
+    color        : #fff;
+    text-align   : center;
+}
+
+.colecao-figures .container-colecao {
+    padding-top: 50px;
+}
+
+.colecao-figures .container-compras {
+    padding-top: 20px;
+}
+
+.colecao-figures .container-colecao>h1 {
+    border-top   : 5px solid rgb(0, 225, 255);
+    border-bottom: 5px solid rgb(0, 225, 255);
+    font-size    : 40px;
+    color        : #fff;
+    text-align   : center;
+}
+
+.colecao-figures .container-colecao>h2 {
+    border-bottom: 5px solid rgb(0, 225, 255);
+    font-size    : 40px;
+    color        : #fff;
+    text-align   : center;
+}
+.colecao-figures .container-colecao>h3 {
+    margin-top: 40px;
+    border-top   : 5px solid rgb(0, 225, 255);
+    border-bottom: 5px solid rgb(0, 225, 255);
+    font-size    : 40px;
+    color        : #fff;
+    text-align   : center;
+}
+
+.main-compras {
+    margin               : auto;
+    max-width            : 1400px;
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
+    grid-gap             : 15px;
+    justify-content      : center;
+    align-content        : center;
+    padding              : 20px;
+}
+
+.card {
+    margin       : 15px;
+    background   : #ece9e9;
+    color        : #000000;
+    width        : 180px;
+    height       : 320px;
+    border-radius: 10px;
+    text-align   : center;
+    box-shadow   : rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
+.card>h1 {
+    font-size    : 16px;
+    padding-top  : 10px;
+    margin-top   : -10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.04);
+
+}
+
+.card>h2 {
+    font-size    : 15px;
+    padding-top  : 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.04);
+    color        : #ff1500;
+}
+
+.card>h3 {
+    font-size    : 15px;
+    padding-top  : 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.04);
+}
+
+.card>img {
+    width                  : 95%;
+    height                 : 180px;
+    border-top-left-radius : 10px;
+    border-top-right-radius: 10px;
+    padding-top            : 5px;
+
+}
