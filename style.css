@@ -214,7 +214,7 @@ a {
 .banner-section {
     background-image   : url(./assets/background.png);
     background-size    : cover;
-    height             : 90vh;
+    height             : 86vh;
     width              : 100vw;
     display            : block;
 }
